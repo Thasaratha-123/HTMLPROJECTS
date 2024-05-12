@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #212529;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #495057;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        form button {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to THASARATHA PRANAV Restaurant</h1>
+        <p>Delicious Food Served Daily</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="images/appetizer.jpg" alt="Appetizer">
+            <div>
+                <h3>Appetizers</h3>
+                <p>Start your meal with our tasty appetizers.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/main-course.jpg" alt="Main Course">
+            <div>
+                <h3>Main Courses</h3>
+                <p>Explore our selection of hearty main courses.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/dessert.jpg" alt="Dessert">
+            <div>
+                <h3>Desserts</h3>
+                <p>Satisfy your sweet tooth with our delightful desserts.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/drinks.jpg" alt="Drinks">
+            <div>
+                <h3>Drinks</h3>
+                <p>Quench your thirst with our refreshing beverages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>We are passionate about serving high-quality, tasty meals using fresh ingredients. Our restaurant is a place where you can enjoy a wonderful dining experience with friends and family.</p>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>Reach out to us at:</p>
+        <p>Email: info@myrestaurant.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+
+    <section>
+        <h2>Make a Reservation</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit">Make Reservation</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Restaurant</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        /* Example 1: Moving Box Animation */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            border-radius: 5px;
+            animation: moveBox 2s ease infinite alternate;
+        }
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200px);
+            }
+        }
+
+        /* Example 2: Color Changing Animation */
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #28a745;
+            border-radius: 50%;
+            animation: changeColor 2s ease infinite alternate;
+        }
+        @keyframes changeColor {
+            0% {
+                background-color: #28a745;
+            }
+            50% {
+                background-color: #ffc107;
+            }
+            100% {
+                background-color: #dc3545;
+            }
+        }
+
+        /* Example 3: Scaling Animation */
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: #6610f2;
+            animation: scaleBox 2s ease infinite alternate;
+        }
+        @keyframes scaleBox {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Example 4: Fade-in Animation */
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: #6c757d;
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Example 1: Moving Box -->
+    <div class="box1"></div>
+
+    <!-- Example 2: Color Changing Circle -->
+    <div class="box2"></div>
+
+    <!-- Example 3: Scaling Box -->
+    <div class="box3"></div>
+
+    <!-- Example 4: Fade-in Box -->
+    <div class="box4"></div>
+</body>
+</html>

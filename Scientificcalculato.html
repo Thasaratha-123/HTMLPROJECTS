@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .calculator {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+            text-align: right;
+        }
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <br>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+        <br>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="*" onclick="addToDisplay('*')">
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <br>
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" value="C" onclick="clearDisplay()">
+        <input type="button" value="sin" onclick="trigFunction('sin')">
+        <input type="button" value="cos" onclick="trigFunction('cos')">
+        <input type="button" value="tan" onclick="trigFunction('tan')">
+        <br>
+        <input type="button" value="log" onclick="logFunction('log')">
+        <input type="button" value="ln" onclick="logFunction('ln')">
+        <input type="button" value="√" onclick="sqrtFunction()">
+        <input type="button" value="π" onclick="addToDisplay(Math.PI)">
+    </div>
+
+    <script>
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function calculate() {
+            var display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function trigFunction(func) {
+            var display = document.getElementById('display');
+            var result;
+            try {
+                var value = eval(display.value);
+                switch (func) {
+                    case 'sin':
+                        result = Math.sin(value * (Math.PI / 180));
+                        break;
+                    case 'cos':
+                        result = Math.cos(value * (Math.PI / 180));
+                        break;
+                    case 'tan':
+                        result = Math.tan(value * (Math.PI / 180));
+                        break;
+                }
+                display.value = result.toFixed(6); // Round to 6 decimal places
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        function logFunction(func) {
+            var display = document.getElementById('display');
+            var result;
+            try {
+                var value = eval(display.value);
+                switch (func) {
+                    case 'log':
+                        result = Math.log10(value);
+                        break;
+                    case 'ln':
+                        result = Math.log(value);
+                        break;
+                }
+                display.value = result.toFixed(6); // Round to 6 decimal places
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        function sqrtFunction() {
+            var display = document.getElementById('display');
+            var result;
+            try {
+                var value = eval(display.value);
+                result = Math.sqrt(value);
+                display.value = result.toFixed(6); // Round to 6 decimal places
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Survey Form</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Your Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <label>How did you hear about us? (Check all that apply)</label>
+            <br>
+            <input type="checkbox" id="hear-website" name="hear[]" value="website">
+            <label for="hear-website">Website</label>
+            <br>
+            <input type="checkbox" id="hear-friend" name="hear[]" value="friend">
+            <label for="hear-friend">Friend</label>
+            <br>
+            <input type="checkbox" id="hear-social" name="hear[]" value="social-media">
+            <label for="hear-social">Social Media</label>
+            <br>
+            <input type="checkbox" id="hear-other" name="hear[]" value="other">
+            <label for="hear-other">Other</label>
+
+            <label for="improvements">How can we improve our service?</label>
+            <textarea id="improvements" name="improvements" rows="4"></textarea>
+
+            <label>Rate your overall satisfaction:</label>
+            <br>
+            <input type="radio" id="satisfaction-1" name="satisfaction" value="1">
+            <label for="satisfaction-1">1 - Very Dissatisfied</label>
+            <br>
+            <input type="radio" id="satisfaction-2" name="satisfaction" value="2">
+            <label for="satisfaction-2">2 - Dissatisfied</label>
+            <br>
+            <input type="radio" id="satisfaction-3" name="satisfaction" value="3">
+            <label for="satisfaction-3">3 - Neutral</label>
+            <br>
+            <input type="radio" id="satisfaction-4" name="satisfaction" value="4">
+            <label for="satisfaction-4">4 - Satisfied</label>
+            <br>
+            <input type="radio" id="satisfaction-5" name="satisfaction" value="5">
+            <label for="satisfaction-5">5 - Very Satisfied</label>
+
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
